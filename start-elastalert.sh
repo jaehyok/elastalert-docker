@@ -1,6 +1,7 @@
 #!/bin/sh
 
 set -e
+cp /usr/share/zoneinfo/Asia/Seoul /etc/localtime 
 
 # Set schema and elastalert options
 case "${ELASTICSEARCH_TLS}:${ELASTICSEARCH_TLS_VERIFY}" in

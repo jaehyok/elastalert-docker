@@ -71,6 +71,9 @@ RUN python setup.py install && \
     apk del libffi-dev && \
     rm -rf /var/cache/apk/*
 
+# copy my rules
+COPY ./rules/* ${RULES_DIRECTORY}
+
 # Copy the script used to launch the Elastalert when a container is started.
 COPY ./start-elastalert.sh /opt/
 # Make the start-script executable.
